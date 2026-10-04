@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Shifa ❤️</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#08070c;color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 10%,#4a173b55,transparent 35%),radial-gradient(circle at 80% 80%,#5b174555,transparent 35%);pointer-events:none}
+section{min-height:100vh;padding:70px 22px;display:flex;align-items:center;justify-content:center;position:relative}
+.card{width:min(700px,100%);text-align:center;position:relative;z-index:2}
+h1{font-size:clamp(42px,12vw,85px);line-height:.95;margin:15px 0;background:linear-gradient(90deg,#fff,#ff9dcc,#fff);-webkit-background-clip:text;color:transparent}
+h2{font-size:clamp(28px,7vw,48px);margin:0 0 20px}.muted{color:#c9c4ca}.small{font-size:14px;color:#aaa}
+button{border:0;border-radius:999px;padding:15px 25px;font-size:16px;font-weight:700;cursor:pointer;background:#fff;color:#111;box-shadow:0 10px 35px #0008}
+button.pink{background:#ff5ca8;color:#fff}.hidden{display:none}
+.heart{font-size:65px;animation:pulse 1.4s infinite}@keyframes pulse{50%{transform:scale(1.16)}}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s}.reveal.show{opacity:1;transform:none}
+.photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:25px 0}.photo{height:210px;border-radius:20px;overflow:hidden;background:#17141c;border:1px solid #ffffff18}.photo img{width:100%;height:100%;object-fit:cover}
+.reason{text-align:left;background:#ffffff09;border:1px solid #ffffff12;padding:16px 18px;border-radius:16px;margin:10px 0}
+.reason b{color:#ff8fc4}.map{padding:30px 10px;border-radius:25px;background:#ffffff08;border:1px solid #ffffff14}.route{font-size:24px;margin:20px 0}.line{height:2px;background:linear-gradient(90deg,transparent,#ff66aa,transparent);margin:25px 0}
+.quote{font-size:22px;line-height:1.55;font-style:italic}.final{font-size:20px;line-height:1.7}
+#lock{position:fixed;inset:0;background:#08070c;z-index:99;display:flex;align-items:center;justify-content:center;padding:25px}
+.lockbox{max-width:520px;text-align:center}.input{width:100%;padding:15px;border-radius:14px;border:1px solid #ffffff22;background:#ffffff0b;color:#fff;margin:12px 0;font-size:16px;text-align:center}
+audio{width:100%;margin-top:20px}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:1}
+@media(max-width:500px){.photo{height:180px}}
+</style>
+</head>
+<body>
+
+<canvas id="hearts"></canvas>
+
+<!-- OPTIONAL PASSWORD: change "0510" below. Set to "" to disable. -->
+<div id="lock">
+  <div class="lockbox">
+    <div class="heart">❤️</div>
+    <p class="small">A little surprise made only for Shifa</p>
+    <h2>Enter the secret code</h2>
+    <input id="code" class="input" placeholder="Hint: Your birthday 💕" inputmode="numeric">
+    <button class="pink" onclick="unlock()">Open My Surprise</button>
+    <p id="wrong" class="small"></p>
+  </div>
+</div>
+
+<section>
+<div class="card">
+  <div class="heart">❤️</div>
+  <p class="small">5 OCTOBER 2026</p>
+  <h1>Happy Birthday<br>Shifa</h1>
+  <p class="quote">“Tumhe wish karne wale bahut honge…<br>lekin ye surprise sirf tumhare liye hai.”</p>
+  <button class="pink" onclick="document.querySelector('#memories').scrollIntoView()">Open Your Surprise ↓</button>
+</div>
+</section>
+
+<section id="memories">
+<div class="card reveal">
+<h2>Our Little World</h2>
+<p class="muted">Har photo ke peeche ek memory hai… aur har memory mein tum. ❤️</p>
+<div class="photo-grid">
+  <!-- Replace these image URLs with your own photos -->
+  <div class="photo"><img src="https://placehold.co/700x700/24131f/ffffff?text=Your+Photo+1" alt="Memory 1"></div>
+  <div class="photo"><img src="https://placehold.co/700x700/24131f/ffffff?text=Your+Photo+2" alt="Memory 2"></div>
+  <div class="photo"><img src="https://placehold.co/700x700/24131f/ffffff?text=Your+Photo+3" alt="Memory 3"></div>
+  <div class="photo"><img src="https://placehold.co/700x700/24131f/ffffff?text=Your+Photo+4" alt="Memory 4"></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card reveal">
+<h2>21 Reasons ❤️</h2>
+<p class="muted">Inhe apni real memories/inside jokes se replace karna.</p>
+<div id="reasons"></div>
+</div>
+</section>
+
+<section>
+<div class="card reveal">
+<h2>Delhi → Lucknow</h2>
+<div class="map">
+  <div class="route">📍 Delhi &nbsp; ❤️ &nbsp; 📍 Lucknow</div>
+  <div class="line"></div>
+  <p class="quote">“Distance map par hai…<br>meri life mein tum abhi bhi utni hi close ho.”</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card reveal">
+<h2>Press & Listen 🎧</h2>
+<p class="muted">Yahan apni 30–60 second ki voice recording add karo.</p>
+<audio controls src="your-voice-note.mp3"></audio>
+<p class="small">Voice file ka naam <b>your-voice-note.mp3</b> rakhkar isi folder mein rakho.</p>
+</div>
+</section>
+
+<section>
+<div class="card reveal">
+<h2>Agar main aaj tumhare paas hota…</h2>
+<p class="final">
+toh sabse pehle tumhe ek tight hug karta. 🫂<br><br>
+Phir tumhe dekhta aur kehta…<br>
+<strong>“Happy Birthday meri Jaan.”</strong> ❤️<br><br>
+Aaj main tumhare paas nahi hoon,<br>
+lekin meri dua, meri feelings aur mera dil<br>
+tumhare saath hai.
+</p>
+<div class="line"></div>
+<h2>Happy Birthday, Puchchi ❤️</h2>
+<p class="muted">— Anas</p>
+</div>
+</section>
+
+<script>
+const PASSWORD="0510"; // CHANGE THIS
+
+const reasons=[
+"0. Yahan apni first reason likho ❤️",
+"1. Tumhari woh chhoti si aadat jo mujhe bahut pasand hai.",
+"2. Tum jis tarah meri fikr karti ho.",
+"3. Tumhari smile.",
+"4. Tumhare saath baat karne ke baad mood better ho jata hai.",
+"5. Tum mujhe bina bole samajh leti ho.",
+"6. Tumhari cute si gussa hone wali style.",
+"7. Tumhari honesty.",
+"8. Tumhari voice.",
+"9. Tumhare saath banayi hui memories.",
+"10. Tumhara mujhe special feel karwana.",
+"11. Tumhari care.",
+"12. Tumhari patience.",
+"13. Tumhare saath future imagine karna.",
+"14. Tumhari छोटी-सी छोटी बातें yaad rehna.",
+"15. Tumhare saath hasi-mazaak.",
+"16. Tumhara mujhe motivate karna.",
+"17. Tumhari simplicity.",
+"18. Tumhara ‘Anas’ kehna.",
+"19. Tumhare saath har normal moment bhi special lagta hai.",
+"20. Aur sabse important — tum, bas tum. ❤️"
+];
+document.getElementById("reasons").innerHTML=reasons.map((r,i)=>`<div class="reason"><b>${r.split(".")[0]}.</b>${r.substring(r.indexOf(".")+1)}</div>`).join("");
+
+function unlock(){
+ const v=document.getElementById("code").value;
+ if(!PASSWORD || v===PASSWORD){
+   document.getElementById("lock").style.display="none";
+   document.body.style.overflowX="hidden";
+   document.querySelectorAll(".reveal").forEach((e,i)=>setTimeout(()=>e.classList.add("show"),150+i*100));
+ }else document.getElementById("wrong").textContent="Code galat hai… birthday hint try karo ❤️";
+}
+document.getElementById("code").addEventListener("keydown",e=>{if(e.key==="Enter")unlock()});
+
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.15});
+document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
+
+const c=document.getElementById("hearts"),ctx=c.getContext("2d");let w,h,hs=[];
+function resize(){w=c.width=innerWidth;h=c.height=innerHeight}resize();addEventListener("resize",resize);
+for(let i=0;i<35;i++)hs.push({x:Math.random(),y:Math.random(),s:8+Math.random()*13,v:.15+Math.random()*.35,a:Math.random()*6.28});
+function draw(){ctx.clearRect(0,0,w,h);ctx.font="18px serif";hs.forEach(o=>{o.y-=o.v/1000;if(o.y<-.05)o.y=1.05;o.a+=.01;ctx.globalAlpha=.12;ctx.fillText("♥",o.x*w,o.y*h)});requestAnimationFrame(draw)}draw();
+</script>
+</body>
+</html>
